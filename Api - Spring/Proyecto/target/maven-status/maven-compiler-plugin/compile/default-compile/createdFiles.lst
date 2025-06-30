@@ -1,0 +1,12 @@
+mantenimiento\Cibertec\Proyecto\Controller\EquiposController.class
+mantenimiento\Cibertec\Proyecto\Service\EquipoService.class
+mantenimiento\Cibertec\Proyecto\Entity\Equipos.class
+mantenimiento\Cibertec\Proyecto\Repositorio\EquiposRepositorio.class
+mantenimiento\Cibertec\Proyecto\ProyectoApplication.class
+mantenimiento\Cibertec\Proyecto\Repositorio\UsuariosRepositorio.class
+mantenimiento\Cibertec\Proyecto\Repositorio\MantenimientoRepositorio.class
+mantenimiento\Cibertec\Proyecto\DTO\EquipoMapper.class
+mantenimiento\Cibertec\Proyecto\Service\EquipoServiceImplement.class
+mantenimiento\Cibertec\Proyecto\Entity\Mantenimiento.class
+mantenimiento\Cibertec\Proyecto\Entity\Usuarios.class
+mantenimiento\Cibertec\Proyecto\DTO\EquiposDTO.class
