@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - Equipos y Mantenimientos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <style>
+        body {
+            background-color: #f0f4f8; 
+        }
+
+        .estado-circle {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .estado-recibido {
+            background-color: #f9c74f; 
+        }
+
+        .estado-proceso {
+            background-color: #f8961e; 
+        }
+
+        .estado-finalizado {
+            background-color: #43aa8b; 
+        }
+    </style>
+</head>
+<body>
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Dashboard de Equipos y Mantenimiento</h2>
+        <button class="btn btn-danger" onclick="logout()">Cerrar sesión</button>
+    </div>
+
+    <h4>🔧 Equipos</h4>
+    <input type="text" id="buscarNombre" placeholder="Buscar por nombre" class="form-control mb-2" />
+    <button class="btn btn-primary mb-3" onclick="buscarEquipos()">Buscar</button>
+    <button class="btn btn-secondary mb-3 ms-2" onclick="cargarEquipos()">Ver todos</button>
+
+    <table class="table table-bordered" id="tablaEquipos">
+        <thead>
+        <tr><th>Nombre</th><th>Tipo</th><th>Sku</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h4 class="mt-4">🛠️ Reportes de Mantenimiento</h4>
+    <div class="mb-3">
+        <button class="btn btn-secondary ms-2" onclick="cargarMantenimientos()">Ver Todos</button>
+        <button class="btn estado-recibido text-white me-2" onclick="filtrarMantenimientos('Recibido')">Recibido</button>
+        <button class="btn estado-proceso text-white me-2" onclick="filtrarMantenimientos('En Proceso')">En Proceso</button>
+        <button class="btn estado-finalizado text-white" onclick="filtrarMantenimientos('Finalizado')">Finalizado</button>
+    </div>
+
+    <table class="table table-bordered" id="tablaMantenimientos">
+        <thead>
+        <tr>
+            <th>Equipo</th>
+            <th>Descripción</th>
+            <th>Tipo de Mantenimiento</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
