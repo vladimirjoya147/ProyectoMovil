@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "573098117900",
+    "project_id": "appmantenimiento-8da92",
+    "storage_bucket": "appmantenimiento-8da92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573098117900:android:0376b10abfdb75e4451729",
+        "android_client_info": {
+          "package_name": "com.cibertec.proyecto_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjqiBYdjK_3ebZnEYlK7eyg2qbyRau7BE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
